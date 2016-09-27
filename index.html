@@ -1,0 +1,175 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css">
+        <link rel="stylesheet" href="black.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <p><font size="26"><b>Time-Series Graphics</b></font></p>
+                </section>
+                <section>
+                    <section>
+                        <p><font size="20">Some Important Tips on Time-Series Graphs</font></h3>
+                    </section>
+
+                    <section>
+                        <p>We use Line Charts for a Reason</p>
+                        <img src="images/whyline1.png" width="1000">
+                        <img src="images/whyline2.png" width="1000">
+                    </section>
+                    <section>
+                        <div width="1200">
+                            <img src="images/adnan1.png" width="460" style="display:inline-block;">
+                            <img src="images/adnan2.png" width="460" style="display:inline-block;">
+                        </div>
+                    </section>
+                    <section>
+                        <p>Axis Length Matters</p>
+                        <img src="images/axis-length.png" width="800">
+                    </section>
+
+                    <section>
+                        <p>Don't Say More Than You Know</p>
+                        <img src="images/missing.png" width="800">
+                    </section>
+                    <section>
+                        <p>Don't Say More Than You Know</p>
+                        <img src="images/var1.png" width="800">
+                    </section>
+
+                    <section>
+                        <p>Don't Say More Than You Know</p>
+                        <img src="images/var2.png" width="800">
+                    </section>
+                    <section>
+                        <p>Be Careful of Incomplete Periods</p>
+                        <img src="images/incomplete.png" width="800">
+                    </section>
+                    <section>
+                        <p>Instead:</p>
+                        <img src="images/incomplete2.png" width="800">
+                    </section>
+
+                    <section>
+                        <p>Consider slope charts when you just care about magnitude of change.</p>
+                        <img src="images/slope.png" width="800"><br>
+                        <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003nk">Tufte Intro to Slope Charts</a>
+                    </section>
+
+                    <section>
+                        <p>Consider log scale for rate of change.</p>
+                        <img src="images/logscale1.png" width="800">
+                    </section>
+
+                    <section>
+                        <p>Consider log scale for rate of change.</p>
+                        <img src="images/logscale2.png" width="800">
+                        <p>log() and log10() functions in R<p>
+                    </section>
+
+                    <section>
+                        <p>Remember you can de-season AND de-trend</p>
+                        <img src="images/season_trend.jpg" width="800">
+                    </section>
+                   <section>
+                        <p>Can you see a trend within months?</p>
+                        <img src="images/cycleplot1.png" width="800">
+                    </section>
+                   <section>
+                        <p>Enter the Cycle Plot</p>
+                        <img src="images/cycleplot2.png" width="800">
+                    </section>
+ 
+                    <section>
+                        <blockquote>
+                            Friends don’t let friends use two y-axes.
+                        </blockquote>
+                        <p>--Matt Yglesias</p>
+                    </section>
+                    <section>
+                        <img src="images/dualyaxes.png" width="800"><br>
+                        <a href="https://kieranhealy.org/blog/archives/2016/01/16/two-y-axes/?imm_mid=0dfe1f&cmp=em-data-na-na-newsltr_20160203">Source: Kieran Healy</a>
+                    </section>
+                    <section>
+                        <p>So instead of this:</p>
+                        <img src="images/twoYAxes.png" width="800"><br>
+                        <a href="https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf">Source: Stephen Few</a>
+                    </section>
+                    <section>
+                        <p>Consider two different line charts:</p>
+                        <img src="images/multiples.png" width="600">
+                    </section>
+                    <section>
+                        <p>Or scaling/rebasing:</p>
+                        <img src="images/rebase.png" width="800">
+
+                    </section>
+                    <section>
+                        <p>Or a different graph type:</p>
+                        <a href="https://twitter.com/AlexCEngler/status/777540365859495936">e.g. Direct Scatterplot</a>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <p><font size="20">Novel Approaches to Time-Series Visualizations</font></p>
+                    </section>
+                    <section>
+                        <p>Time along the x-axis - Joseph Priestly (1769)</p>
+                        <img src="images/A_New_Chart_of_History_color.jpg" width="1000">
+                    </section>
+                    <section>
+                        <p>More recently...</p>
+                        <a href="http://www.nytimes.com/imagepages/2006/08/26/weekinreview/27leon_graph2.html">NYT - A History of Home Values</a>
+                        <img src="images/history-home.png" width="800">
+                    </section>
+                    <section>
+                        <p>Not Just Lines/Bars Charts</p>
+                        <iframe src="http://graphics.wsj.com/infectious-diseases-and-vaccines/" width="1200" height = "600"></iframe>
+                    </section>
+                    <section>
+                        <p>Not Just Lines/Bars Charts</p>
+                        <img src="images/timeheatmap.png" width="800"/>
+                    </section>
+                    <section>
+                        <p>You have a lot of vertical space.</p>
+                        <a href="http://fontsinuse.com/uses/3820/the-histomap-four-thousand-years-of-world-his">Histomap</a><br>
+                        <a href="http://intuitionanalytics.com/other/histomap/">Histomap Revisited</a><br>
+                        <a href="https://xkcd.com/1127/">XKCD's Congressional History</a>
+                    </section>
+                    <section>
+                        <p>But charts can be pretty small.</p><br>
+                        <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR">Spark Lines</a><br>
+                        <a href="http://projects.fivethirtyeight.com/2016-endorsement-primary/">538's Take</a>
+                    </section>
+                    <section>
+                        <a href="http://junkcharts.typepad.com/.a/6a00d8341e992c53ef0163023b578e970d-pi">Radial Axis for Time</a><br>
+                        <a href="https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard.png">Original Charles Minard Graph</a><br>
+                        <a href="https://en.wikipedia.org/wiki/Pie_chart#/media/File:Nightingale-mortality.jpg">Original Nightingale</a>
+                    </section> 
+                    <section>
+                        <p>Small multiples can work too</p><br>
+                        <a href="http://flowingdata.com/2015/07/02/changing-price-of-food-items-and-horizon-graphs/">Horizon Graphs</a>  
+                    </section>
+                    <section>
+                        <p>Interactivity for Time<p>
+                        <a href="http://apps.urban.org/features/OurChangingCity/demographics/#race">Urban Sliding Window</a><br>
+                        <a href = "http://apps.urban.org/features/OurChangingCity/housing/index.html">Urban GIF</a><br>
+                    </section>  
+                    <section>
+                        <p>GIFs for Maps/Networks over Time<p>
+                        <a href="https://www.washingtonpost.com/news/wonk/wp/2014/06/23/a-hundred-years-of-american-politics-in-one-gif/">Map GIF</a><br>
+                        <a href ="https://gfycat.com/FloweryDirtyGermanshorthairedpointer">Network GIF</a><br>
+                    </section>  
+                </section>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script>
+        <script>
+            Reveal.initialize();
+        </script>
+    </body>
+</html>
